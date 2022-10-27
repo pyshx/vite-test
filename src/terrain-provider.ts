@@ -68,7 +68,6 @@ class GsiTerrainProvider implements TerrainProvider {
   format: string;
   tileSize: number = 256;
 
-  // @ts-ignore
   constructor(opts?: { ellipsoid?: Ellipsoid }) {
     this.martini = new Martini(this.tileSize + 1);
     this.ready = true;
@@ -92,7 +91,7 @@ class GsiTerrainProvider implements TerrainProvider {
 
   async getPixels(url: string, type = ""): Promise<NdArray<Uint8Array>> {
     return new Promise((resolve, reject) => {
-      getPixels(url, type, (err, array: NdArray<Uint8Array>) => {
+      getPixels(url, type, (err, array) => {
         if (err != null) reject(err);
         resolve(array);
       });
@@ -215,11 +214,8 @@ class GsiTerrainProvider implements TerrainProvider {
       maximumHeight: maxHeight,
       quantizedVertices,
       indices: triangles,
-      // @ts-ignore
       boundingSphere,
-      // @ts-ignore
       orientedBoundingBox: orientedBoundingBox ?? undefined,
-      // @ts-ignore
       horizonOcclusionPoint,
       westIndices,
       southIndices,
