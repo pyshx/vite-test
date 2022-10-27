@@ -14,6 +14,7 @@
     "@types/get-pixels": "^3.3.2",
     "@types/ndarray": "^1.0.7",
     "cesium": "^1.96.0",
+    "cesium-gsi-terrain": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "resium": "^1.15.0",
