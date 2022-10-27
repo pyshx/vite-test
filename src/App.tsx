@@ -3,13 +3,13 @@ import { Viewer } from "resium";
 import GsiTerrainProvider from "./terrain-provider";
 import {terrain} from "./terrain";
 
-import MartiniTerrainProvider from "@macrostrat/cesium-martini";
+import {MartiniTerrainProvider} from "@macrostrat/cesium-martini";
 
 function App() {
 
   return (
     <div className="App">
-      <Viewer full terrainProvider={terrain}/>
+      <Viewer full terrainProvider={MartiniTerrainProvider}/>
     </div>
   );
 }
